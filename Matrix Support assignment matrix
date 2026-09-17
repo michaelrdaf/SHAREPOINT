@@ -1,4 +1,4 @@
-//PST columns color formatting
+//COLOR ASSIGNMENT CELLS GREEN FOR PRIMARY POC
 
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
@@ -9,6 +9,22 @@
     "font-weight": "=if(@currentField == 'P', 'bold', 'normal')",
     "padding": "4px 8px",
     "border-radius": "4px"
+  },
+  "txtContent": "@currentField"
+}
+
+
+//COLOR EMPTY CELLS RED
+
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "background-color": "=if(@currentField == '', '#fff2cc', '')",
+    "color": "#000000",
+    "font-weight": "=if(@currentField == '', 'bold', 'normal')",
+    "min-height": "24px",
+    "padding": "4px 8px"
   },
   "txtContent": "@currentField"
 }
